@@ -1,0 +1,69 @@
+{% if page.rtl == true %}
+  {% assign direction = "right" %}
+{% else %}
+  {% assign direction = "left" %}
+{% endif %}
+{% capture form %}
+  <li class="col-5-10" style="float:{{ direction }}; overflow:auto">
+    <div class="ae-3">
+      <form action="{{ page.signup }}" autocomplete="off">
+        <input type="submit" class="button oolm_color_4 ae-5 fromBlur rounded stroke" name="submit_{{ page.nav_tag }}" value="{{ page.action_title }}"/>
+      </form>
+    </div>
+  </li>
+{% endcapture %}
+
+<!-- Slide 3 (#61) -->
+<section class="slide fade oolm_color_2 kenBurns"  data-name="{{ page.nav_tag }}">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+          
+        <div class="fix-12-12">
+          <ul class="flex verticalTop">
+            <li class="col-4-12 left ae-1">
+              <img class="_side_left margin-bottom-3" src="{{ page.image_src }}" height="auto" width="auto" alt="{{ page.image_alt }}"/>
+            </li>
+            <li class="col-8-12 {{ direction }} _{{ direction }}" style="margin-top:5%">
+              <ul class="flex">
+                {% if page.rtl == true %}
+                  {{ form }}
+                {% endif %}
+                <li class="col-5-10">
+                  <h1 class="ae-2">{{ page.h1 }}</h1>
+                </li>
+                {% if page.rtl == false %}
+                  {{ form }}
+                {% endif %}
+              </ul>
+              <ul class="flex grid-61 later">
+                <li class="col-6-12 ae-4">
+                  <i class="material-icons text-oolm_color_4">{{ page.i_1 }}</i>
+                  <h3>{{ page.h3_1 }}</h3>
+                  <p class="small">{{ page.p_1 }}</p>
+                </li>
+                <li class="col-6-12 ae-5">
+                  <i class="material-icons text-oolm_color_4">{{ page.i_2 }}</i>
+                  <h3>{{ page.h3_2 }}</h3>
+                  <p class="small">{{ page.p_2 }}</p>
+                </li>
+                <li class="col-6-12 ae-6">
+                  <i class="material-icons text-oolm_color_4">{{ page.i_3 }}</i>
+                  <h3>{{ page.h3_3 }}</h3>
+                  <p class="small">{{ page.p_3 }}</p>
+                </li>
+                <li class="col-6-12 ae-7">
+                  <i class="material-icons text-oolm_color_4">{{ page.i_4 }}</i>
+                  <h3>{{ page.h3_3 }}</h3>
+                  <p class="small">{{ page.p_4 }}</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url({{ page.bg_image }})"></div>
+</section>
