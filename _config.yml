@@ -7,8 +7,8 @@ collections_dir: collections
 layout: empty
 
 # Site defaults
-us_url: onlyonelike.me
-il_url: il.onlyonelike.me
+us_url: https://onlyonelike.me
+il_url: https://il.onlyonelike.me
 title: Only One Like Me - הורים פוגשים מטפלים
 tagline: מוצאים ומנהלים את הטיפול האופטימלי לילדכם
 description: >- # this means to ignore newlines until "baseurl:"
