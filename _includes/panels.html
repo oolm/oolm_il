@@ -10,7 +10,7 @@
   {% assign other_lang_url = site.us_url %}
 {% else %}
   {% assign nav_slides = site.slides | where: "nav_target", true | sort: "slide_no" %} 
-  {% assign other_lang = "עברית" %}
+  {% assign other_lang = "🇮🇱 עברית" %}
   {% assign other_lang_url = site.il_url %}
 {% endif %}
 
@@ -94,7 +94,7 @@
 </nav>
 
 <!-- Share Window -->
-<div class="dropdown share bottom right" data-dropdown-id="2" data-text="אתר שמפגיש הורים ומטפלים" data-url="https://onlyonelike.me" data-pinterest-image="https://onlyonelike.me/assets/i2/ooml-og-image.jpg">
+<div class="dropdown share bottom right" data-dropdown-id="2" data-text="{{ page.share_by_email_subject }}" data-url="{{ site.url }}" data-pinterest-image="{{ site.og_image }}">
   <div class="title">{{ page.share_title }}</div>
   <ul>
     <li class="facebook"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fb-like"></use></svg></li>
