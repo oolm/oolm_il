@@ -5,12 +5,12 @@
   {% assign link = page.menu_contact_link %}
 {% endif %}
 {% if page.rtl %}
-  {% assign nav_slides = site.slides | where: "nav_target", true | sort: "slide_no" | reverse %} 
+  {% assign nav_slides = ordered_slides | where: "nav_target", true | sort: "slide_no" | reverse %} 
   {% assign other_lang = "English &nbsp; &#x1f1fa;&#x1f1f8;" %}
   {% assign other_lang_url = site.us_url %}
   {% assign nav_side = "left" %}
 {% else %}
-  {% assign nav_slides = site.slides | where: "nav_target", true | sort: "slide_no" %} 
+  {% assign nav_slides = ordered_slides | where: "nav_target", true | sort: "slide_no" %} 
   {% assign other_lang = "🇮🇱 עברית" %}
   {% assign other_lang_url = site.il_url %}
   {% assign nav_side = "right" %}
@@ -24,7 +24,7 @@
 </nav>
 
 <!-- Panel Top #10 -->
-<nav class="panel top forceMobileView hideOnScroll oolm_color_1" style="opacity:0.6">
+<nav class="panel top forceMobileView hideOnScroll oolm_color_1" style="opacity:0.8">
   <div class="sections desktop">
     <div class="left">
       <ul class="menu uppercase crop">
@@ -35,16 +35,16 @@
       </ul>
     </div>
     <div class="center">
-      <ul class="menu uppercase crop">
+      <ul class="menu uppercase crop bold">
         
         {% if page.rtl == true %}
-          <li><a href="{{ link }}">{{ page.menu_contact_name }}</a></li>
+          <li><a href="{{ link }}" class="large">{{ page.menu_contact_name }}</a></li>
         {% endif %}
         {% for nav in nav_slides %}
-          <li><a href="#{{ nav.nav_tag }}">{{ nav.nav_name }}</a></li>
+          <li><a href="#{{ nav.nav_tag }}" class="large">{{ nav.nav_name }}</a></li>
         {% endfor %}
         {% if page.rtl == false %}
-          <li><a href="{{ link }}">{{ page.menu_contact_name }}</a></li>
+          <li><a href="{{ link }}" class="large">{{ page.menu_contact_name }}</a></li>
         {% endif %}
       </ul>
     </div>

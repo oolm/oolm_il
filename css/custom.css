@@ -177,3 +177,7 @@
   .stroke.button.oolm_color_5 svg {
     fill: #ff8a43 !important;
   }
+
+  a.large {
+    font-size: 24px;
+  }

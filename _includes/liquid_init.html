@@ -11,3 +11,12 @@
 {% else %}
   {% assign link = page.contact_url %}
 {% endif %}
+
+{% case page.slide_collection %}
+  {% when "parents" %}
+    {% assign ordered_slides = site.parents | sort: 'slide_no' %} 
+  {% when "therapists" %}
+    {% assign ordered_slides = site.therapists | sort: 'slide_no' %} 
+  {% else %}
+    {% assign ordered_slides = "" %}
+{% endcase %}

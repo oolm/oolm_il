@@ -1,7 +1,8 @@
 ---
 layout: slides
 category: homepage
-slide_collection: parents
+slide_collection: therapists
+permalink: /therapists
 
 # panels
 top_nav: true
